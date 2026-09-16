@@ -1,11 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
+
 <body>
-    
+    <div id="cards"></div>
+    <div id="new-book-div"><button id="new-book">New book</button></div>
+    <dialog id="new-book-dialog">
+        <form id="new-book-form">
+            <input type="text" id="title" placeholder="Title" required>
+            <input type="text" id="author" placeholder="Author" required>
+            <input type="number" id="pages" placeholder="Number of Pages" required>
+            <label for=""><input type="checkbox" id="read">Read?</label>
+            <button type="submit">Add Book</button>
+            <button type="button" id="cancel-btn">Cancel</button>
+        </form>
+    </dialog>
 </body>
+
 </html>
