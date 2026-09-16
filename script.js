@@ -9,11 +9,13 @@ function Book(title, author, pages, haveRead){
     this.info = function(){
         console.log(`${this.title} by ${this.author} of ${pages} ; ${haveRead}`);
     }
-    Book.prototype.toggleRead = function () {
+    
+}
+
+Book.prototype.toggleRead = function () {
         this.haveRead = !this.haveRead;
         display();
     };
-}
 
 function addBookToLibrary(title, author, pages, haveRead){
     const book = new Book(title, author, pages, haveRead);
@@ -43,6 +45,7 @@ function display(){
         const delBtn = document.createElement("button");
         delBtn.textContent = "Delete";
         delBtn.style.padding = "5px 10px"
+        delBtn.classList.add("deleBtn");
         // delBtn.style.marginBottom = "10px"
         delBtn.addEventListener("click", () => {
             const index = myLib.findIndex((book) => book.id === card.dataset.id);
@@ -55,6 +58,7 @@ function display(){
             book.toggleRead();
             display();
         });
+        toggleBtn.classList.add("togBtn");
         card.appendChild(delBtn);
         cards.appendChild(card);
     })
