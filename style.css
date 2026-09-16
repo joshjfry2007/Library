@@ -13,20 +13,35 @@ input{
 
 .book-card {
     /* width: 300px; */
+    flex : 1;
     min-width: 300px;
-    height: 200px;
+    min-height: 170px;
     display: flex;
     flex-direction: column;
-    /* gap: 10px; */
+    
+    /* flex-shrink: 1; */
+    /* gap: 0.5px; */
     align-items: center;
     justify-content: center;
     border-radius: 4px;
-    background-color: rgb(83, 48, 116);
+    
+    /* background-color: rgb(83, 48, 116); */
+}
+.book-card p {
+    margin: 6px;
+}
+
+.book-card button{
+    margin-bottom: 20px;
+    margin-top: 20px;
 }
 
 #cards{
     display: flex;
     gap: 10px;
+    /* flex-shrink: 0; */
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 #new-book-div{
